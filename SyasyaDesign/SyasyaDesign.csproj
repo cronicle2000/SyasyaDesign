@@ -90,7 +90,9 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Homepage.aspx" />
-    <Content Include="ImagesAndIcons\Images\SyasyaDesignLogo.png" />
+    <Content Include="ImagesAndIcons\Icons\account.svg" />
+    <Content Include="ImagesAndIcons\SyasyaDesignLogo.png" />
+    <Content Include="Layout\global.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Fonts\FiraSans-Medium.ttf" />
     <None Include="packages.config" />
     <Content Include="HeaderAndFooter.Master" />
     <None Include="Web.Debug.config">
@@ -143,9 +146,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64184</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44324/</IISUrl>
+          <IISUrl>http://localhost:58171/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
