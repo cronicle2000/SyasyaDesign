@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" href="Layout/global.css" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
@@ -15,7 +16,27 @@
             width: 100%
         }
         .space {
-            width: 30%
+            width: 5%;
+        }
+        .header-nav-wrapper {
+            width: 10%;
+            height: auto;
+            text-align: center;
+        }
+        .header-nav {
+            font-family: FiraSans-Medium;
+            text-decoration: none;
+            color: black;
+            overflow: hidden;
+            font-size: large;
+        }
+        .header-icon {
+            width: 30px;
+            height: 30px;
+        }
+        .logo {
+            width: 7%;
+            height: 80px
         }
         
     </style>
@@ -27,11 +48,28 @@
                 <table>
                     <tr>
                         <td class="logo">
-                            <asp:ImageButton ID="imgBtnLogo" runat="server" ImageUrl="~/ImagesAndIcons/Images/SyasyaDesignLogo.png" />
+                            <img src="/ImagesAndIcons/SyasyaDesignLogo.png" runat="server" />
                         </td>
                         <td class="space"></td>
-                        <td>
-
+                        <td class="header-nav-wrapper">
+                            <a class="header-nav" href="#">Home</a>
+                        </td>
+                        <td class="space"></td>
+                        <td class="header-nav-wrapper">
+                            <a class="header-nav" href="#">Items</a>
+                        </td>
+                        <td class="space"></td>
+                        <td class="header-nav-wrapper">
+                            <a class="header-nav" href="#">About</a>
+                        </td>
+                        <td class="header-nav-wrapper">
+                            <asp:ImageButton ID="imgBtnAccount" runat="server" ImageUrl="~/ImagesAndIcons/Icons/account.svg" PostBackUrl="#" Tooltip="Account" CssClass="header-icon" />
+                        </td>
+                        <td class="header-nav-wrapper">
+                            
+                        </td>
+                        <td class="header-nav-wrapper">
+                            
                         </td>
                     </tr>
                 </table>
