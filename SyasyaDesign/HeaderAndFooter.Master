@@ -7,9 +7,36 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .global-header {
+            width: 100%
+        }
+        .wrapper {
+            width: 100%
+        }
+        .space {
+            width: 30%
+        }
+        
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
+        <header class="global-header">
+            <div class="wrapper">
+                <table>
+                    <tr>
+                        <td class="logo">
+                            <asp:ImageButton ID="imgBtnLogo" runat="server" ImageUrl="~/ImagesAndIcons/Images/SyasyaDesignLogo.png" />
+                        </td>
+                        <td class="space"></td>
+                        <td>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </header>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
