@@ -11,7 +11,7 @@ namespace SyasyaDesign
 {
 
 
-    public partial class Product_Staff_
+    public partial class Product_Staff_1
     {
 
         /// <summary>

@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HeaderAndFooter.Master" AutoEventWireup="true" CodeBehind="Product(Staff).aspx.cs" Inherits="SyasyaDesign.Product_Staff_" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HeaderAndFooter.Master" AutoEventWireup="true" CodeBehind="Product(Staff)1.aspx.cs" Inherits="SyasyaDesign.Product_Staff_1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Image ID="Image1" runat="server" Height="186px" Width="175px" />
+        <asp:Image ID="Image1" runat="server" Height="186px" Width="175px" />
     <asp:TextBox ID="TextBox1" runat="server">Product Name</asp:TextBox>
     <asp:TextBox ID="TextBox2" runat="server">Product SKU</asp:TextBox>
     <asp:TextBox ID="TextBox3" runat="server">Product Desc</asp:TextBox>
