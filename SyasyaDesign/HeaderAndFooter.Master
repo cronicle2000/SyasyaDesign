@@ -5,11 +5,10 @@
 <html>
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" href="Layout/global.css" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
-        .global-header {
+        .global-width {
             width: 100%
         }
         .wrapper {
@@ -24,33 +23,55 @@
             text-align: center;
         }
         .header-nav {
-            font-family: FiraSans-Medium;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             text-decoration: none;
             color: black;
             overflow: hidden;
             font-size: large;
         }
+        .header-nav:hover {
+            text-decoration: underline #FF0000 2px;
+            text-underline-offset: 2px;
+        }
+
         .header-icon {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
         }
         .logo {
-            width: 7%;
-            height: 80px
+            width: 6%;
+            height: 60px
+        }
+        .divider-line {
+            border-bottom-color: black;
+            border-bottom-width: 2px;
+        }
+
+        .footer-space {
+            width: 35%;
+        }
+        .footer-center {
+            width: 30%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .footer-icon {
+            width: 30px;
+            height: 30px;
         }
         
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <header class="global-header">
+        <header class="global-width">
             <div class="wrapper">
-                <table>
+                <table style="border-bottom-style: solid; border-bottom-color: inherit; border-bottom-width: 1px; margin-bottom: 5px; margin-top: 5px">
                     <tr>
+                        <td style="width: 10px"></td>
                         <td class="logo">
                             <img src="/ImagesAndIcons/SyasyaDesignLogo.png" runat="server" />
                         </td>
-                        <td class="space"></td>
+                        <td style="width: 30px"></td>
                         <td class="header-nav-wrapper">
                             <a class="header-nav" href="#">Home</a>
                         </td>
@@ -65,20 +86,46 @@
                         <td class="header-nav-wrapper">
                             <asp:ImageButton ID="imgBtnAccount" runat="server" ImageUrl="~/ImagesAndIcons/Icons/account.svg" PostBackUrl="#" Tooltip="Account" CssClass="header-icon" />
                         </td>
+                        <td class="space"></td>
                         <td class="header-nav-wrapper">
-                            
+                            <asp:ImageButton ID="imgBtnFav" runat="server" ImageUrl="~/ImagesAndIcons/Icons/favourite.svg" PostBackUrl="#" Tooltip="Favourite" CssClass="header-icon" />
                         </td>
+                        <td class="space"></td>
                         <td class="header-nav-wrapper">
-                            
+                            <asp:ImageButton ID="imgBtnCart" runat="server" ImageUrl="~/ImagesAndIcons/Icons/cart.svg" PostBackUrl="#" Tooltip="Shopping Cart" CssClass="header-icon" />
                         </td>
+                        <td style="width: 10px"></td>
                     </tr>
                 </table>
             </div>
         </header>
+
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+
+        <footer>
+            <div class="global-width">
+                <table style="border-top-style: solid; border-top-color: black; border-top-width: 2px; margin-top: 5px; margin-bottom: 5px; width: 100%">
+                    <tr style="width: inherit;">
+                        <td class="footer-space"></td>
+                        <td class="footer-center">
+                            <div style="float: left; width: 40px"></div>
+                            <p style="float: left;">FIND US ON : &nbsp</p>
+                            <div style="float: left; width: 40px"></div>
+                            <div style="float: left;"><asp:ImageButton ID="imgBtnFb" runat="server" ImageUrl="#" CssClass="footer-icon" /></div>
+                            <div style="float: left; width: 40px"></div>
+                            <div style="float: left;"><asp:ImageButton ID="imgBtnInsta" runat="server" ImageUrl="#" CssClass="footer-icon" /></div>
+                            <div style="float: left; width: 40px"></div>
+                            <div style="float: left;"><asp:ImageButton ID="imgBtnTwit" runat="server" ImageUrl="#" CssClass="footer-icon" /></div>
+                            <div style="float: left; width: 40px"></div>
+                        </td>
+                        <td class="footer-space"></td>
+                    </tr>
+                </table>
+            </div>
+        </footer>
     </form>
 </body>
 </html>

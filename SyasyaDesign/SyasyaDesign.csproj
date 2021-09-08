@@ -91,8 +91,14 @@
     <Content Include="Global.asax" />
     <Content Include="Homepage.aspx" />
     <Content Include="ImagesAndIcons\Icons\account.svg" />
+    <Content Include="ImagesAndIcons\Icons\cart.svg" />
+    <Content Include="ImagesAndIcons\Icons\facebook_icon.svg" />
+    <Content Include="ImagesAndIcons\Icons\favourite.svg" />
+    <Content Include="ImagesAndIcons\Icons\instagram_icon.svg" />
+    <Content Include="ImagesAndIcons\Icons\twitter_icon.svg" />
     <Content Include="ImagesAndIcons\SyasyaDesignLogo.png" />
     <Content Include="Layout\global.css" />
+    <Content Include="Product%28Staff%29.aspx" />
     <Content Include="Web.config" />
     <Content Include="LoginPage.aspx" />
   </ItemGroup>
@@ -107,6 +113,13 @@
     </Compile>
     <Compile Include="Homepage.aspx.designer.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product%28Staff%29.aspx.cs">
+      <DependentUpon>Product%28Staff%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product%28Staff%29.aspx.designer.cs">
+      <DependentUpon>Product%28Staff%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HeaderAndFooter.Master.cs">
@@ -126,7 +139,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="Fonts\FiraSans-Medium.ttf" />
     <None Include="packages.config" />
     <Content Include="HeaderAndFooter.Master" />
     <None Include="Web.Debug.config">
