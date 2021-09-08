@@ -94,6 +94,7 @@
     <Content Include="ImagesAndIcons\SyasyaDesignLogo.png" />
     <Content Include="Layout\global.css" />
     <Content Include="Web.config" />
+    <Content Include="LoginPage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -114,6 +115,13 @@
     </Compile>
     <Compile Include="HeaderAndFooter.Master.designer.cs">
       <DependentUpon>HeaderAndFooter.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
