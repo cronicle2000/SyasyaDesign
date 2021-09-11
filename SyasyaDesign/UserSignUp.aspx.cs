@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace SyasyaDesign
 {
-    public partial class UserSignUp : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
+	public partial class UserSignUp1 : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
 
-        }
-    }
+		}
+	}
 }

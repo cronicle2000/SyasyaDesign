@@ -1,85 +1,58 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TestMaster.Master" AutoEventWireup="true" CodeBehind="AdminLogin.aspx.cs" Inherits="SyasyaDesign.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TestMaster.Master" AutoEventWireup="true" CodeBehind="AdminLogin.aspx.cs" Inherits="SyasyaDesign.AdminLogin1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container">
+      <div class="row">
+         <div class="col-md-6 mx-auto">
+
+            <div class="card">
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col">
+                        <center>
+                           <img width="150px" src="ImagesAndIcons/imgs/adminuser.png"/>
+                        </center>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                        <center>
+                           <h3>Admin Login</h3>
+                        </center>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                        <hr>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+
+                        <label>Admin ID</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Admin ID"></asp:TextBox>
+                        </div>
+
+                        <label>Password</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                        </div>
+                         &nbsp
+                        <div class="form-group">
+                           <asp:Button class="btn btn-success w-100 btn-lg" ID="Button1" runat="server" Text="Login" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <a href="Homepage.aspx"><< Back to Home</a><br><br>
+
+         </div>
+      </div>
+   </div>
 </asp:Content>
 
-<!DOCTYPE html>  
-  
-<html xmlns="http://www.w3.org/1999/xhtml">  
-<head runat="server">  
-    <title></title>  
-    <style type="text/css">  
-        .auto-style1 {  
-            width: 100%;  
-        }  
-    </style>  
-</head>  
-<body>  
-    <form id="form1" runat="server">  
-    <div>  
-      
-        <table class="auto-style1">  
-            <tr>  
-                <td colspan="6" style="text-align: center; vertical-align: top">  
-                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Font-Underline="True" Text="Log In "></asp:Label>  
-                </td>  
-            </tr>  
-            <tr>  
-                <td> </td>  
-                <td style="text-align: center">  
-                    <asp:Label ID="Label2" runat="server" Font-Size="X-Large" Text="UserId :"></asp:Label>  
-                </td>  
-                <td style="text-align: center">  
-                    <asp:TextBox ID="TextBox1" runat="server" Font-Size="X-Large"></asp:TextBox>  
-                </td>  
-                <td> </td>  
-                <td> </td>  
-                <td> </td>  
-            </tr>  
-            <tr>  
-                <td> </td>  
-                <td style="text-align: center">  
-                    <asp:Label ID="Label3" runat="server" Font-Size="X-Large" Text="Password :"></asp:Label>  
-                </td>  
-                <td style="text-align: center">  
-                    <asp:TextBox ID="TextBox2" runat="server" Font-Size="X-Large" TextMode="Password"></asp:TextBox>  
-                </td>  
-                <td> </td>  
-                <td> </td>  
-                <td> </td>  
-            </tr>  
-            <tr>  
-                <td> </td>  
-                <td> </td>  
-                <td> </td>  
-                <td> </td>  
-                <td> </td>  
-                <td> </td>  
-            </tr>  
-            <tr>  
-                <td> </td>  
-                <td> </td>  
-                <td style="text-align: center">  
-                    <asp:Button ID="Button1" runat="server" BorderStyle="None" Font-Size="X-Large" OnClick="Button1_Click" Text="Log In" />  
-                </td>  
-                <td> </td>  
-                <td> </td>  
-                <td> </td>  
-            </tr>  
-            <tr>  
-                <td> </td>  
-                <td> </td>  
-                <td>  
-                    <asp:Label ID="Label4" runat="server" Font-Size="X-Large"></asp:Label>  
-                </td>  
-                <td> </td>  
-                <td> </td>  
-                <td> </td>  
-            </tr>  
-        </table>  
-      
-    </div>  
-    </form>  
-</body>  
-</html>  
+

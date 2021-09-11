@@ -1,8 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TestMaster.Master" AutoEventWireup="true" CodeBehind="UserSignUp.aspx.cs" Inherits="SyasyaDesign.UserSignUp1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TestMaster.Master" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="SyasyaDesign.UserProfile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div class="containerfluid">
+
+    <div class="containerfluid">
       <div class="row">
          <div class="col-md-8 mx-auto">
 
@@ -18,7 +19,9 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <h4>Member Registration</h4>
+                           <h4>Your Profile</h4>
+                            <span>Account Status - </span>
+                            <asp:Label ID="Label1" class="badge rounded-pill bg-info" runat="server" Text="Your Status"></asp:Label>
                         </center>
                      </div>
                   </div>
@@ -119,21 +122,21 @@
                      <div class="col-md-4">
                         <label>User ID</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="User ID"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="User ID" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
 
                      <div class="col-md-4">
-                        <label>Password</label>
+                        <label>Old Password</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Password" TextMode="Password" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
 
                      <div class="col-md-4">
-                        <label>Confirm Password</label>
+                        <label>New Password</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Confirm Password" TextMode="Password"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="New Password" TextMode="Password"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -142,7 +145,7 @@
                      <div class="col-8 mx-auto">
                         <center>
                            <div class="form-group">
-                              <asp:Button class="btn btn-success w-100 btn-lg" ID="Button1" runat="server" Text="Sign Up" />
+                              <asp:Button class="btn btn-primary w-100 btn-lg" ID="Button1" runat="server" Text="Update" />
                            </div>
                         </center>
                      </div>
@@ -155,4 +158,5 @@
 
       </div>
    </div>
+
 </asp:Content>
