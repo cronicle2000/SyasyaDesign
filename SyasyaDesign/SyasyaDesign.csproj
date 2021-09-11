@@ -91,7 +91,7 @@
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="bootstrap\js\jquery-3.3.1.slim.min.js" />
-    <Content Include="css\FooterStyleSheet.css" />
+    <Content Include="css\StyleSheet.css" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />
     <Content Include="datatables\js\jquery.dataTables.min.js" />
     <Content Include="fontawesome\attribution.js" />
@@ -1749,12 +1749,18 @@
     <Content Include="ImagesAndIcons\Icons\favourite.svg" />
     <Content Include="ImagesAndIcons\Icons\instagram_icon.svg" />
     <Content Include="ImagesAndIcons\Icons\twitter_icon.svg" />
+    <Content Include="ImagesAndIcons\imgs\adminuser.png" />
+    <Content Include="ImagesAndIcons\imgs\defaulters-list.png" />
+    <Content Include="ImagesAndIcons\imgs\generaluser.png" />
+    <Content Include="ImagesAndIcons\imgs\sign-up.png" />
     <Content Include="ImagesAndIcons\SyasyaDesignLogo.png" />
     <Content Include="Layout\global.css" />
     <Content Include="Product%28Staff%29.aspx" />
     <Content Include="Product%28Staff%291.aspx" />
+    <Content Include="UserSignUp.aspx" />
     <Content Include="Web.config" />
-    <Content Include="LoginPage.aspx" />
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="UserLogin.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -1790,12 +1796,12 @@
     <Compile Include="HeaderAndFooter.Master.designer.cs">
       <DependentUpon>HeaderAndFooter.Master</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.aspx.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginPage.aspx.designer.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestMaster.Master.cs">
       <DependentUpon>TestMaster.Master</DependentUpon>
@@ -1803,6 +1809,20 @@
     </Compile>
     <Compile Include="TestMaster.Master.designer.cs">
       <DependentUpon>TestMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserSignUp.aspx.cs">
+      <DependentUpon>UserSignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserSignUp.aspx.designer.cs">
+      <DependentUpon>UserSignUp.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

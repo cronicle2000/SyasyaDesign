@@ -19,7 +19,7 @@
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <%--custom css--%>
-    <link href="css/FooterStyleSheet.css" rel="stylesheet" />
+    <link href="css/StyleSheet.css" rel="stylesheet" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
