@@ -2,48 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Image ID="Image1" runat="server" Height="186px" Width="175px" />
-    <asp:TextBox ID="TextBox1" runat="server">Product Name</asp:TextBox>
-    <asp:TextBox ID="TextBox2" runat="server">Product SKU</asp:TextBox>
-    <asp:TextBox ID="TextBox3" runat="server">Product Desc</asp:TextBox>
-
-    <br />
-    <br />
-    <asp:Image ID="Image2" runat="server" Height="186px" Width="175px" />
-    <asp:TextBox ID="TextBox4" runat="server">Product Name</asp:TextBox>
-    <asp:TextBox ID="TextBox5" runat="server">Product SKU</asp:TextBox>
-    <asp:TextBox ID="TextBox6" runat="server">Product Desc</asp:TextBox>
-    
-    <br />
-    <br />
-    <asp:Image ID="Image3" runat="server" Height="186px" Width="175px" />
-    <asp:TextBox ID="TextBox7" runat="server">Product Name</asp:TextBox>
-    <asp:TextBox ID="TextBox8" runat="server">Product SKU</asp:TextBox>
-    <asp:TextBox ID="TextBox9" runat="server">Product Desc</asp:TextBox>
-    
-    <br />
-    <br />
-    <asp:Image ID="Image4" runat="server" Height="186px" Width="175px" />
-    <asp:TextBox ID="TextBox10" runat="server">Product Name</asp:TextBox>
-    <asp:TextBox ID="TextBox11" runat="server">Product SKU</asp:TextBox>
-    <asp:TextBox ID="TextBox12" runat="server">Product Desc</asp:TextBox>
-    
-    <br />
-    <br />
-    <asp:Image ID="Image5" runat="server" Height="186px" Width="175px" />
-    <asp:TextBox ID="TextBox13" runat="server">Product Name</asp:TextBox>
-    <asp:TextBox ID="TextBox14" runat="server">Product SKU</asp:TextBox>
-    <asp:TextBox ID="TextBox15" runat="server">Product Desc</asp:TextBox>
-
-    <br />
-    <br />
-    <div style="margin-left:800px">
-    <asp:Button ID="Button1" runat="server" Text="<" />
-    <asp:Button ID="Button2" runat="server" Text="1" />
-    <asp:Button ID="Button3" runat="server" Text="2" />
-    <asp:Button ID="Button4" runat="server" Text="3" />
-    <asp:Button ID="Button5" runat="server" Text="..." />
-    <asp:Button ID="Button6" runat="server" Text=">" />
-
-    </div>
+    <table>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ProductID" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="ProductID" HeaderText="ProductID" ReadOnly="True" SortExpression="ProductID" />
+                <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
+                <asp:BoundField DataField="ProductImgs" HeaderText="ProductImgs" SortExpression="ProductImgs" />
+                <asp:BoundField DataField="ProductStock" HeaderText="ProductStock" SortExpression="ProductStock" />
+                <asp:BoundField DataField="ProductBrand" HeaderText="ProductBrand" SortExpression="ProductBrand" />
+                <asp:BoundField DataField="ProductDescription" HeaderText="ProductDescription" SortExpression="ProductDescription" />
+                <asp:BoundField DataField="ProductCategory" HeaderText="ProductCategory" SortExpression="ProductCategory" />
+                <asp:BoundField DataField="ProductPrice" HeaderText="ProductPrice" SortExpression="ProductPrice" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProductDB %>" SelectCommand="SELECT * FROM [Table]"></asp:SqlDataSource>
+    </table>
 </asp:Content>

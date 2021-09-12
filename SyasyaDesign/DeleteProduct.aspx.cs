@@ -7,19 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace SyasyaDesign
 {
-    public partial class Product_Staff_ : System.Web.UI.Page
+    public partial class DeleteProduct : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Minus(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Add(object sender, EventArgs e)
         {
 
         }
