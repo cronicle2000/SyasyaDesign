@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
 <style>
 .backg {
     background-attachment: fixed;
@@ -30,7 +31,14 @@
     text-align:left;
     margin-bottom:20px;
 }
-
+.label { 
+     padding-left:20%;
+     padding-top: 20px;
+     text-align:left
+}
+.label2{
+    padding-top: 20px;
+}
 .text{
     padding-left:20%;
       padding-bottom:10px;
@@ -65,23 +73,126 @@
     color:white;
 }
 
-
+.parent{
+    display: flex;
+}
 .left{
     height:100%;
     width:100%;
     text-align:center;
 }
          
+
+    .auto-style1 {
+        margin-top: 30px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 20px;
+        width: 572px;
+    }
+    .auto-style2 {
+        width: 572px;
+    }
+    .auto-style3 {
+        width: 572px;
+        height: 19px;
+    }
+    .auto-style4 {
+        height: 19px;
+    }
          
 
 </style>
-    <table>
-        <td>
-     <asp:SqlDataSource ID="productDB" runat="server" ConnectionString="<%$ ConnectionStrings:ProductDB %>" SelectCommand="SELECT * FROM [Product]"></asp:SqlDataSource>
-        </td>
+<div class="backg">
+    <div class="parent">
+        <div class="left">
+       <table class="styled-table">
+           <tr><td class="auto-style1">Stock of <asp:Label ID="lblProd" runat="server" Text="Label"></asp:Label></td></tr>
+           <tr>
+                    <td colspan="2"><hr /></td>
+                  </tr>
+           
+           <tr><td style="text-align:center" colspan="2">
+               <asp:Image ID="ImageProduct" runat="server" BorderColor="Black" Width="200px" Height="200px"/>
+               <tr>
+            <td style="text-align:right; padding-right:15px;" class="auto-style2">
+            <asp:Label ID="ProductID" runat="server" Text="ProductID:"></asp:Label>
+            </td>
 
-        <td>
-            <asp:Button ID="Button1" runat="server" Text="Delete" />
-        </td>
-    </table>
+            <td style="text-align:left; padding-left:15px">
+               <asp:Label ID="ProdID" runat="server" Text="ID"></asp:Label>
+            </td>
+        </tr>
+
+                <tr>
+            <td style="text-align:right; padding-right:15px;" class="auto-style3">
+            <asp:Label ID="Label1" runat="server" Text="ProductName:"></asp:Label>
+            </td>
+
+            <td style="text-align:left; padding-left:15px" class="auto-style4">
+                <asp:Label ID="ProdName" runat="server" Text="Name"></asp:Label>
+            </td>
+        </tr>
+
+                <tr>
+            <td style="text-align:right; padding-right:15px;" class="auto-style2">
+            <asp:Label ID="Label2" runat="server" Text="ProductStock:"></asp:Label>
+            </td>
+
+            <td style="text-align:left; padding-left:15px">
+                <asp:Label ID="ProdStock" runat="server" Text="Stock"></asp:Label>
+            </td>
+        </tr>
+
+                <tr>
+            <td style="text-align:right; padding-right:15px;" class="auto-style2">
+            <asp:Label ID="Label3" runat="server" Text="ProductBrand:"></asp:Label>
+            </td>
+
+            <td style="text-align:left; padding-left:15px">
+                <asp:Label ID="ProdBrand" runat="server" Text="Brand"></asp:Label>
+            </td>
+        </tr>
+
+                <tr>
+            <td style="text-align:right; padding-right:15px;" class="auto-style2">
+            <asp:Label ID="Label4" runat="server" Text="ProductDescription:"></asp:Label>
+            </td>
+
+            <td style="text-align:left; padding-left:15px">
+                <asp:Label ID="ProdDesc" runat="server" Text="Description"></asp:Label>
+            </td>
+        </tr>
+
+                <tr>
+            <td style="text-align:right; padding-right:15px;" class="auto-style2">
+            <asp:Label ID="Label5" runat="server" Text="ProductCategory:"></asp:Label>
+            </td>
+
+            <td style="text-align:left; padding-left:15px">
+                <asp:Label ID="ProdCat" runat="server" Text="Category"></asp:Label>
+            </td>
+        </tr>
+
+                <tr>
+            <td style="text-align:right; padding-right:15px;" class="auto-style2">
+            <asp:Label ID="Label8" runat="server" Text="ProductPrice:"></asp:Label>
+            </td>
+
+            <td style="text-align:left; padding-left:15px">
+                <asp:Label ID="ProdPrice" runat="server" Text="Price"></asp:Label>
+            </td>
+        </tr>
+
+
+            
+          
+           <tr><td colspan="2">
+               <asp:Button ID="btndelete" runat="server" Text="Delete" CssClass="button" OnClick="btndelete_Click"/>
+               </td></tr>
+       </table>
+       </div>
+     </div>
+    </div>
 </asp:Content>

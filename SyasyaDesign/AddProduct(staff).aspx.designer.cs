@@ -15,6 +15,15 @@ namespace SyasyaDesign
     {
 
         /// <summary>
+        /// ProImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ProImg;
+
+        /// <summary>
         /// ProductID control.
         /// </summary>
         /// <remarks>
@@ -24,13 +33,31 @@ namespace SyasyaDesign
         protected global::System.Web.UI.WebControls.Label ProductID;
 
         /// <summary>
-        /// Label1 control.
+        /// ProID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl ProID;
+
+        /// <summary>
+        /// ProductName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ProductName;
+
+        /// <summary>
+        /// ProName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ProName;
 
         /// <summary>
         /// Label2 control.
@@ -42,6 +69,15 @@ namespace SyasyaDesign
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
+        /// ProStock control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl ProStock;
+
+        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>
@@ -49,6 +85,15 @@ namespace SyasyaDesign
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
+        /// ProBrand control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ProBrand;
 
         /// <summary>
         /// Label4 control.
@@ -60,6 +105,15 @@ namespace SyasyaDesign
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
+        /// ProDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ProDesc;
+
+        /// <summary>
         /// Label6 control.
         /// </summary>
         /// <remarks>
@@ -67,6 +121,15 @@ namespace SyasyaDesign
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label6;
+
+        /// <summary>
+        /// ProCat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ProCat;
 
         /// <summary>
         /// Label7 control.
@@ -78,21 +141,21 @@ namespace SyasyaDesign
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// Button1 control.
+        /// ProPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl ProPrice;
 
         /// <summary>
-        /// Button2 control.
+        /// Button3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button Button3;
     }
 }

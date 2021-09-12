@@ -9,7 +9,7 @@
     background-attachment: fixed;
     background-size:cover;
     width:100%;
-    background-image: url('../ImagesAndIcons/Images/pexels-photo-1084510.jpeg');
+    background-image: url('..\SyasyaDesign\ImagesAndIcons\product1.png');
 }
 
 .styled-table {
@@ -96,6 +96,7 @@
            
            <tr><td style="text-align:center" colspan="2">
                <asp:Image ID="ImageProduct" runat="server" BorderColor="Black" Width="200px" Height="200px"/>
+               <%--<img src=""  ID="ImageProduct"  runat="server"/>--%>
                </td></tr>
            <tr><td style="text-align:center" colspan="2"><asp:Label ID="lblName" runat="server"/>
                </td></tr>
@@ -108,7 +109,7 @@
                </td></tr>
           
            <tr><td colspan="2">
-               <asp:Button ID="btnAdd" runat="server" Text="Update" CssClass="button"/>
+               <asp:Button ID="btnAdd" runat="server" Text="Update" CssClass="button" OnClick="btnAdd_Click"/>
                </td></tr>
        </table>
        </div>
