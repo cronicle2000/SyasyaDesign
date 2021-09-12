@@ -21,7 +21,7 @@
                         <center>
                            <h4>Your Profile</h4>
                             <span>Account Status - </span>
-                            <asp:Label ID="Label1" class="badge rounded-pill bg-info" runat="server" Text="Your Status"></asp:Label>
+                            <asp:Label ID="Label1" class="badge rounded-pill bg-success" runat="server" Text="Active"></asp:Label>
                         </center>
                      </div>
                   </div>
@@ -145,7 +145,7 @@
                      <div class="col-8 mx-auto">
                         <center>
                            <div class="form-group">
-                              <asp:Button class="btn btn-primary w-100 btn-lg" ID="Button1" runat="server" Text="Update" />
+                              <asp:Button class="btn btn-primary w-100 btn-lg" ID="UpdateButton" runat="server" Text="Update" OnClick="UpdateButton_Click" />
                            </div>
                         </center>
                      </div>

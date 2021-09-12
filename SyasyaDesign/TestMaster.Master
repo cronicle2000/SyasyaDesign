@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TestMaster.Master.cs" Inherits="SyasyaDesign.Site2" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TestMaster.Master.cs" Inherits="SyasyaDesign.TestMaster1" %>
 
 <!DOCTYPE html>
 
@@ -53,17 +53,17 @@
 
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server">User Login</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="UserLoginButton" runat="server" OnClick="UserLoginButton_Click">User Login</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server">Sign Up</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="SignUpButton" runat="server" OnClick="SignUpButton_Click">Sign Up</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server">Logout</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="LogOutButton" runat="server" OnClick="LogOutButton_Click" Visible="false">Logout</asp:LinkButton>
                         </li>
 
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server">Hello user</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="HelloButton" runat="server" OnClick="HelloButton_Click" Visible="false">Hello user</asp:LinkButton>
                         </li>
                     </ul>
                 </div>
@@ -86,13 +86,11 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                         <p>
-                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server">Admin Login</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="AdminButton" runat="server" OnClick="AdminButton_Click">Admin Login</asp:LinkButton>
                             &nbsp;
-                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server">Inventory</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="InventoryButton" runat="server" OnClick="InventoryButton_Click" Visible="false">Inventory</asp:LinkButton>
                             &nbsp;
-                            <asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server">Orders</asp:LinkButton>
-                            &nbsp;
-                             <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server">Customer Management</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="OrderButton" runat="server" OnClick="OrderButton_Click" Visible="false">Orders</asp:LinkButton>
                         </p>
                     </div>
                 </div>

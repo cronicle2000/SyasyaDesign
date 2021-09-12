@@ -11,7 +11,7 @@ namespace SyasyaDesign
 {
 
 
-    public partial class Site2
+    public partial class TestMaster1
     {
 
         /// <summary>
@@ -33,40 +33,40 @@ namespace SyasyaDesign
         protected global::System.Web.UI.HtmlControls.HtmlForm mainHeader;
 
         /// <summary>
-        /// LinkButton1 control.
+        /// UserLoginButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.LinkButton UserLoginButton;
 
         /// <summary>
-        /// LinkButton2 control.
+        /// SignUpButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
+        protected global::System.Web.UI.WebControls.LinkButton SignUpButton;
 
         /// <summary>
-        /// LinkButton3 control.
+        /// LogOutButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
+        protected global::System.Web.UI.WebControls.LinkButton LogOutButton;
 
         /// <summary>
-        /// LinkButton7 control.
+        /// HelloButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton7;
+        protected global::System.Web.UI.WebControls.LinkButton HelloButton;
 
         /// <summary>
         /// ContentPlaceHolder1 control.
@@ -78,39 +78,30 @@ namespace SyasyaDesign
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
 
         /// <summary>
-        /// LinkButton6 control.
+        /// AdminButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton6;
+        protected global::System.Web.UI.WebControls.LinkButton AdminButton;
 
         /// <summary>
-        /// LinkButton8 control.
+        /// InventoryButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton8;
+        protected global::System.Web.UI.WebControls.LinkButton InventoryButton;
 
         /// <summary>
-        /// LinkButton9 control.
+        /// OrderButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton9;
-
-        /// <summary>
-        /// LinkButton10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton10;
+        protected global::System.Web.UI.WebControls.LinkButton OrderButton;
     }
 }
