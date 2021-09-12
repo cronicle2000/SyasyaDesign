@@ -4,35 +4,62 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
     <style>
         table{
             text-align:center;
             padding: 40px 40px 40px 40px;
+
         }
+
+        .button{
+	        font-family: Raleway, sans-serif;
+	        height:40px;
+	        width:200px;
+	        border:none;
+	        background-color:royalblue;
+	        color:white;
+	        font-size:12pt;
+	        border: 1px solid white;
+	        cursor:pointer;
+	        display:inline-block;
+	        border-radius: 5px;
+            opacity:1;
+}
+    .button:hover {
+        background-color:dimgrey;
+        color:white;
+}
+
 
         
     </style>
     
-                <input id="File1" type="image" style="padding:30px 100px 30px 730px; width: 268px; height: 324px; align-content:center"  />
+    
 
     <table style="width: 100%;">
+        <tr>
+            <td style="text-align:center">
+            <input id="ProImg" type="text" runat="server" />
+              </td>
+        </tr>
         <tr>
             <td style="text-align:right; padding-right:15px;">
             <asp:Label ID="ProductID" runat="server" Text="ProductID:"></asp:Label>
             </td>
 
             <td style="text-align:left; padding-left:15px">
-                <input id="Text1" type="text"/>
+                <input id="ProID" type="number" runat="server"/>
             </td>
         </tr>
 
                 <tr>
             <td style="text-align:right; padding-right:15px;">
-            <asp:Label ID="Label1" runat="server" Text="ProductName:"></asp:Label>
+            <asp:Label ID="ProductName" runat="server" Text="ProductName:"></asp:Label>
             </td>
 
             <td style="text-align:left; padding-left:15px">
-                <input id="Text1" type="text" />
+                <input id="ProName" type="text" runat="server" />
             </td>
         </tr>
 
@@ -42,7 +69,7 @@
             </td>
 
             <td style="text-align:left; padding-left:15px">
-                <input id="Text1" type="text" />
+                <input id="ProStock" type="number" runat="server"/>
             </td>
         </tr>
 
@@ -52,7 +79,7 @@
             </td>
 
             <td style="text-align:left; padding-left:15px">
-                <input id="Text1" type="text" />
+                <input id="ProBrand" type="text" runat="server"/>
             </td>
         </tr>
 
@@ -62,7 +89,7 @@
             </td>
 
             <td style="text-align:left; padding-left:15px">
-                <input id="Text1" type="text" />
+                <input id="ProDesc" type="text" runat="server"/>
             </td>
         </tr>
 
@@ -72,7 +99,7 @@
             </td>
 
             <td style="text-align:left; padding-left:15px">
-                <input id="Text1" type="text" />
+                <input id="ProCat" type="text" runat="server"/>
             </td>
         </tr>
 
@@ -82,11 +109,13 @@
             </td>
 
             <td style="text-align:left; padding-left:15px">
-                <input id="Text1" type="text" />
+                <input id="ProPrice" type="number" runat="server"/>
             </td>
         </tr>
+
+        <tr><td colspan="2">
+                <asp:Button ID="Button3" runat="server" Text="Add Product" CssClass="button" OnClick="Button1_Click" />
+            </td></tr>
     </table>
 
-    <asp:Button ID="Button1" runat="server" Text="Add Product" />
-    <asp:Button ID="Button2" runat="server" Text="Cancel" />
 </asp:Content>
