@@ -23,6 +23,126 @@
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        .global-width {
+            width: 100%
+        }
+        .wrapper {
+            width: 100%;
+            
+        }
+        .space {
+            width: 5px;
+        }
+        .header-nav-wrapper {
+            width: 10%;
+            height: auto;
+            text-align: center;
+        }
+        div .header-nav {
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        div .header-nav ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        div .header-nav ul li {
+            list-style: none;
+            margin: 0 20px;
+            float: left;
+            transition: 0.5s;
+            border-radius: 5px;
+        }
+        div .header-nav ul li a {
+            display: block;
+            position: relative;
+            text-decoration: none;
+            padding: 8px;
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            text-transform: uppercase;
+            transition: 0.5s;
+        }
+        div .header-nav ul:hover li a {
+            transform: scale(1.5);
+            opacity: .2;
+            filter: blur(5px);
+        }
+        div .header-nav ul li a:hover {
+            transform: scale(2);
+            opacity: 1;
+            filter: blur(0);
+        }
+        div .header-nav ul li a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ff497c;
+            transition: 0.5s;
+            transform-origin: right;
+            transform: scaleX(0);
+            z-index: -1;
+            border-radius: 5px;
+        }
+        div .header-nav ul li a:hover:before {
+            transition: transform 0.5s;
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+        .header-icon {
+            width: 25px;
+            height: 25px;
+        }
+        .header-icon:hover {
+            transform: scale(2);
+            transition: 0.5s;
+        }
+        .header-icon-wrapper {
+            float: left;
+            align-items: center;
+            padding: 0px 15px 0px 15px;
+        }
+        .logo {
+            width: 6%;
+            height: 40px
+        }
+        .divider-line {
+            border-bottom-color: black;
+            border-bottom-width: 2px;
+        }
+
+        .footer-wrapper {
+            padding-top: 20px;
+        }
+        .footer-space {
+            width: 35%;
+        }
+        .footer-center {
+            width: 30%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .footer-icon {
+            width: 30px;
+            height: 30px;
+        }
+        .footer-icon-wrapper {
+            float: left;
+            padding: 10px 15px 5px 15px;
+            align-items: center;
+        }
+        
+    </style>
+
 </head>
 <body>
     <form id="mainHeader" runat="server">
@@ -61,7 +181,10 @@
                         <li class="nav-item active">
                             <asp:LinkButton class="nav-link" ID="LogOutButton" runat="server" OnClick="LogOutButton_Click" Visible="false">Logout</asp:LinkButton>
                         </li>
-
+                        <li class="nav-item active">
+                            <asp:ImageButton class="nav-link" ImageUrl="ImagesAndIcons/Icons/cart.svg" ID="CartButton" runat="server" OnClick="CartButton_Click" />
+                        </li>
+                        
                         <li class="nav-item active">
                             <asp:LinkButton class="nav-link" ID="HelloButton" runat="server" OnClick="HelloButton_Click" Visible="false">Hello user</asp:LinkButton>
                         </li>
@@ -108,3 +231,4 @@
     </form>
 </body>
 </html>
+

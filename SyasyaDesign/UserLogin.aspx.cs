@@ -19,7 +19,7 @@ namespace SyasyaDesign
         }
 
         // user login
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void LogInButton_Click(object sender, EventArgs e)
         {
             try
             {

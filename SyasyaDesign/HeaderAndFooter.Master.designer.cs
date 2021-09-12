@@ -24,40 +24,58 @@ namespace SyasyaDesign
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
-        /// form1 control.
+        /// mainHeader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm mainHeader;
 
         /// <summary>
-        /// imgBtnAccount control.
+        /// UserLoginButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBtnAccount;
+        protected global::System.Web.UI.WebControls.LinkButton UserLoginButton;
 
         /// <summary>
-        /// imgBtnFav control.
+        /// SignUpButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBtnFav;
+        protected global::System.Web.UI.WebControls.LinkButton SignUpButton;
 
         /// <summary>
-        /// imgBtnCart control.
+        /// LogOutButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBtnCart;
+        protected global::System.Web.UI.WebControls.LinkButton LogOutButton;
+
+        /// <summary>
+        /// CartButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton CartButton;
+
+        /// <summary>
+        /// HelloButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton HelloButton;
 
         /// <summary>
         /// ContentPlaceHolder1 control.
@@ -69,30 +87,30 @@ namespace SyasyaDesign
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
 
         /// <summary>
-        /// imgBtnFb control.
+        /// AdminButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBtnFb;
+        protected global::System.Web.UI.WebControls.LinkButton AdminButton;
 
         /// <summary>
-        /// imgBtnInsta control.
+        /// InventoryButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBtnInsta;
+        protected global::System.Web.UI.WebControls.LinkButton InventoryButton;
 
         /// <summary>
-        /// imgBtnTwit control.
+        /// OrderButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBtnTwit;
+        protected global::System.Web.UI.WebControls.LinkButton OrderButton;
     }
 }

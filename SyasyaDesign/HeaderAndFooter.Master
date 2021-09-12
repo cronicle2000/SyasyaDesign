@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <title></title>
-
+        
     <%--bootstrap css--%>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <%--datatable css--%>
@@ -18,48 +18,112 @@
     <%--popper + bootstrap js--%>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <%--custom css--%>
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
     <style type="text/css">
         .global-width {
             width: 100%
         }
         .wrapper {
-            width: 100%
+            width: 100%;
+            
         }
         .space {
-            width: 5%;
+            width: 5px;
         }
         .header-nav-wrapper {
             width: 10%;
             height: auto;
             text-align: center;
         }
-        .header-nav {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        div .header-nav {
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        div .header-nav ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        div .header-nav ul li {
+            list-style: none;
+            margin: 0 20px;
+            float: left;
+            transition: 0.5s;
+            border-radius: 5px;
+        }
+        div .header-nav ul li a {
+            display: block;
+            position: relative;
             text-decoration: none;
-            color: black;
-            overflow: hidden;
+            padding: 8px;
             font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            text-transform: uppercase;
+            transition: 0.5s;
         }
-        .header-nav:hover {
-            text-decoration: underline #FF0000 2px;
-            text-underline-offset: 2px;
+        div .header-nav ul:hover li a {
+            transform: scale(1.5);
+            opacity: .2;
+            filter: blur(5px);
         }
-
+        div .header-nav ul li a:hover {
+            transform: scale(2);
+            opacity: 1;
+            filter: blur(0);
+        }
+        div .header-nav ul li a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ff497c;
+            transition: 0.5s;
+            transform-origin: right;
+            transform: scaleX(0);
+            z-index: -1;
+            border-radius: 5px;
+        }
+        div .header-nav ul li a:hover:before {
+            transition: transform 0.5s;
+            transform-origin: left;
+            transform: scaleX(1);
+        }
         .header-icon {
             width: 25px;
             height: 25px;
         }
+        .header-icon:hover {
+            transform: scale(2);
+            transition: 0.5s;
+        }
+        .header-icon-wrapper {
+            float: left;
+            align-items: center;
+            padding: 0px 15px 0px 15px;
+        }
         .logo {
             width: 6%;
-            height: 60px
+            height: 40px
         }
         .divider-line {
             border-bottom-color: black;
             border-bottom-width: 2px;
         }
 
+        .footer-wrapper {
+            padding-top: 20px;
+        }
         .footer-space {
             width: 35%;
         }
@@ -71,74 +135,99 @@
             width: 30px;
             height: 30px;
         }
+        .footer-icon-wrapper {
+            float: left;
+            padding: 10px 15px 5px 15px;
+            align-items: center;
+        }
         
     </style>
+
 </head>
 <body>
-    <form id="form1" runat="server">
-        <header class="global-width">
-            <div class="wrapper">
-                <table style="border-bottom-style: solid; border-bottom-color: inherit; border-bottom-width: 1px; margin-bottom: 5px; margin-top: 5px">
-                    <tr>
-                        <td style="width: 10px"></td>
-                        <td class="logo">
-                            <img src="/ImagesAndIcons/SyasyaDesignLogo.png" runat="server" />
-                        </td>
-                        <td style="width: 30px"></td>
-                        <td class="header-nav-wrapper">
-                            <a class="header-nav" href="#">Home</a>
-                        </td>
-                        <td class="space"></td>
-                        <td class="header-nav-wrapper">
-                            <a class="header-nav" href="#">Items</a>
-                        </td>
-                        <td class="space"></td>
-                        <td class="header-nav-wrapper">
-                            <a class="header-nav" href="#">About</a>
-                        </td>
-                        <td class="header-nav-wrapper">
-                            <asp:ImageButton ID="imgBtnAccount" runat="server" ImageUrl="~/ImagesAndIcons/Icons/account.svg" PostBackUrl="#" Tooltip="Account" CssClass="header-icon" />
-                        </td>
-                        <td class="space"></td>
-                        <td class="header-nav-wrapper">
-                            <asp:ImageButton ID="imgBtnFav" runat="server" ImageUrl="~/ImagesAndIcons/Icons/favourite.svg" PostBackUrl="#" Tooltip="Favourite" CssClass="header-icon" />
-                        </td>
-                        <td class="space"></td>
-                        <td class="header-nav-wrapper">
-                            <asp:ImageButton ID="imgBtnCart" runat="server" ImageUrl="~/ImagesAndIcons/Icons/cart.svg" PostBackUrl="#" Tooltip="Shopping Cart" CssClass="header-icon" />
-                        </td>
-                        <td style="width: 10px"></td>
-                    </tr>
-                </table>
-            </div>
-        </header>
+    <form id="mainHeader" runat="server">
 
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="Homepage.aspx">
+                    <img src="ImagesAndIcons/SyasyaDesignLogo.png" width="100" height="50" />
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-expended="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Homepage.aspx">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Items</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="UserLoginButton" runat="server" OnClick="UserLoginButton_Click">User Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="SignUpButton" runat="server" OnClick="SignUpButton_Click">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LogOutButton" runat="server" OnClick="LogOutButton_Click" Visible="false">Logout</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:ImageButton class="nav-link" ImageUrl="ImagesAndIcons/Icons/cart.svg" ID="CartButton" runat="server" OnClick="CartButton_Click" />
+                        </li>
+                        
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="HelloButton" runat="server" OnClick="HelloButton_Click" Visible="false">Hello user</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+
+
+             </nav>
+
+        </div>
+
+        <!--Main Content Placeholder -->
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <!--Main Content Placeholder -->
 
+        <!-- Footer -->
         <footer>
-            <div class="global-width">
-                <table style="border-top-style: solid; border-top-color: black; border-top-width: 2px; margin-top: 5px; margin-bottom: 5px; width: 100%">
-                    <tr style="width: inherit;">
-                        <td class="footer-space"></td>
-                        <td class="footer-center">
-                            <div style="float: left; width: 40px"></div>
-                            <p style="float: left;">FIND US ON : &nbsp</p>
-                            <div style="float: left; width: 40px"></div>
-                            <div style="float: left;"><asp:ImageButton ID="imgBtnFb" runat="server" ImageUrl="#" CssClass="footer-icon" /></div>
-                            <div style="float: left; width: 40px"></div>
-                            <div style="float: left;"><asp:ImageButton ID="imgBtnInsta" runat="server" ImageUrl="#" CssClass="footer-icon" /></div>
-                            <div style="float: left; width: 40px"></div>
-                            <div style="float: left;"><asp:ImageButton ID="imgBtnTwit" runat="server" ImageUrl="#" CssClass="footer-icon" /></div>
-                            <div style="float: left; width: 40px"></div>
-                        </td>
-                        <td class="footer-space"></td>
-                    </tr>
-                </table>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="AdminButton" runat="server" OnClick="AdminButton_Click">Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="InventoryButton" runat="server" OnClick="InventoryButton_Click" Visible="false">Inventory</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="OrderButton" runat="server" OnClick="OrderButton_Click" Visible="false">Orders</asp:LinkButton>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:whitesmoke">&copy All right Reversed.</p>
+                    </div>
+                </div>
             </div>
         </footer>
+        <!-- ./Footer -->
+
     </form>
 </body>
 </html>
