@@ -96,6 +96,15 @@ namespace SyasyaDesign
         protected global::System.Web.UI.WebControls.Button btnPac;
 
         /// <summary>
+        /// lbltxtPac control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltxtPac;
+
+        /// <summary>
         /// btnConfirm control.
         /// </summary>
         /// <remarks>

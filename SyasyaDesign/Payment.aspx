@@ -10,7 +10,17 @@
 
         
         </style> 
+    <script type="text/javascript">
+function ValidNumeric() {    
+    
+    var charCode = (event.which) ? event.which : event.keyCode;    
+    if (charCode >= 48 && charCode <= 57)    
+    { return true; }    
+    else    
+    { return false; }    
+}  
 
+    </script>
       <table style="width: 100%;">
         <tr>
             <td style="text-align:right; padding-right:15px;">
@@ -38,7 +48,8 @@
             </td>
 
             <td style="text-align:left; padding-left:15px" class="auto-style1">
-                <asp:TextBox ID="txtCard" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtCard" runat="server" onkeypress="return ValidNumeric()" MaxLength="16"></asp:TextBox>
+                 
             </td>
         </tr>
 
@@ -48,8 +59,9 @@
             </td>
 
             <td style="text-align:left; padding-left:15px">
-                <asp:TextBox ID="txtPac" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPac" runat="server" onkeypress="return ValidNumeric()" MaxLength="4"></asp:TextBox>
                 <asp:Button ID="btnPac" runat="server" Text="Request PAC" OnClick="btnPac_Click" />
+                <asp:Label ID="lbltxtPac" runat="server" Text="" ForeColor="White"></asp:Label>
             </td>
         </tr>
           <tr>

@@ -10,7 +10,6 @@ namespace SyasyaDesign
     public partial class Payment : System.Web.UI.Page
     {
         string pac = string.Empty;
-        string pacNum = "";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -78,6 +77,8 @@ namespace SyasyaDesign
                     oSmtp.Send(oMail);
 
                     btnConfirm.Enabled = true;
+
+                    lbltxtPac.Text = pac.ToString();
                 }
                 catch (Exception ex)
                 {
@@ -89,8 +90,14 @@ namespace SyasyaDesign
 
         protected void btnConfirm_Click(object sender, EventArgs e)
         {
-            pacNum = pac;
-            if (txtCard.Text != "" && txtPac.Text == pac && txtEmail.Text != "")
+            String card = txtCard.Text;
+            int count = 0;
+            foreach (char c in card)
+            {
+                count++;
+            }
+
+            if (count == 16 && txtPac.Text == lbltxtPac.Text && txtEmail.Text.Contains("@") && txtEmail.Text.Contains("."))
             {
                 Response.Write("<script LANGUAGE='JavaScript' >alert('Payment Successful')</script>");
             }
